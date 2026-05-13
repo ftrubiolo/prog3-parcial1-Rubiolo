@@ -9,10 +9,7 @@
 
 ## 1. Configuración de la Base de Datos
 
-El backend usa una base de datos llamada `parcial_prog3`. 
-
-1. Crea una base de datos llamada `parcial_prog3`.
-2. Crea las tablas `Tareas` y `Categorias`.
+El backend usa una base de datos llamada `parcial_prog3`. Con dos tablas `Tareas` y `Categorias`. 
 
 ```sql
 CREATE DATABASE IF NOT EXISTS parcial_prog3;
@@ -22,6 +19,13 @@ CREATE TABLE Categorias (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL
 );
+
+INSERT INTO Categorias (nombre, color) 
+VALUES 
+    ('Estudio', '#CBAACB'),
+    ('Trabajo', '#AEC6CF'),
+    ('Personal', '#FFDAC1'),
+    ('Salud y Deporte', '#B5EAD7');
 
 CREATE TABLE Tareas (
     id INT AUTO_INCREMENT PRIMARY KEY,
